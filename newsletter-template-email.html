@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter Curso DJ</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+        :root {
+            --main: #6E236C;
+            --sec: #363636;
+            --text: #000000;
+            --accent: #822B80;
+            --extra-one: #754874;
+            --extra-two: #00000000;
+            --extra-three: #F3F1F6;
+            --extra-four: #f2295b;
+            --pad-n: 1em;
+            --pad-n-t-b: 0 2em 0 2em;
+            --pad-n-l-r: 2em 2em;
+            --pad-xl-t-b: 3em 0 3em 0;
+            --pad-xl-l-r: 0 3em 0 3em;
+            --gap-n: 1em;
+            --gap-xl: 2em;
+            --gap-s: .5em;
+        }
+
+        * {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.5em;
+            color: var(--extra-three);
+        }
+
+        html * {
+            padding: 0;
+            margin: 0;
+            max-width: 900px;
+            list-style: none;
+        }
+
+        .header-email,
+        .hero,
+        .horarios,
+        .datos-curso,
+        .icon-video,
+        .fecha-duracion,
+        .dj-director,
+        .datos-lucho,
+        .somos-parte-logos,
+        .footer-email,
+        .social {
+            display: flex;
+        }
+
+        .horarios,
+        .button {
+            padding: var(--pad-n);
+        }
+
+        .datos-curso,
+        .horarios,
+        .fecha-duracion,
+        .datos-lucho {
+            flex-direction: column;
+        }
+
+        .header-email,
+        .hero,
+        .ponente,
+        .somos-parte,
+        .footer-email {
+            padding: var(--pad-n-l-r);
+        }
+
+        .header-email,
+        .somos-parte-logos,
+        .footer-email {
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-email,
+        .footer-email {
+            background-color: var(--text);
+        }
+
+        .datos-curso,
+        .hero,
+        .dj-director,
+        .social {
+            gap: var(--gap-n);
+        }
+
+        .fecha-duracion,
+        .horarios {
+            gap: var(--gap-s);
+        }
+
+        .horarios,
+        .video img,
+        .button {
+            border-radius: 3px;
+        }
+
+        .hero,
+        .ponente {
+            background-image: linear-gradient(45deg, var(--main) 0%, var(--extra-four) 100%);
+        }
+
+        .horarios {
+            background: #f3f1f611;
+        }
+
+        .horarios img,
+        .icon {
+            margin-right: .5em;
+        }
+
+        .datos-curso,
+        .video {
+            flex: 1;
+        }
+
+        .datos-curso,
+        .datos-lucho,
+        .dj-director {
+            justify-content: center;
+        }
+
+        .button {
+            background: var(--text);
+            text-decoration: none;
+            display: inline-block;
+            transition: ease 300ms;
+        }
+
+        .button:hover {
+            background: var(--sec);
+        }
+
+        .icon-video {
+            color: var(--sec);
+            opacity: .75;
+            font-size: 5rem;
+            position: absolute;
+            top: calc(50% - 2.5rem);
+            right: calc(50% - 2.5rem);
+        }
+
+        .video,
+        .dj-director {
+            position: relative;
+        }
+
+        body {
+            margin: auto;
+        }
+
+        .dj-director img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            border: 5px solid var(--extra-three);
+        }
+
+        .temas h2,
+        .somos-parte h2,
+        .ponente h2 {
+            margin-bottom: 1em;
+            text-align: center;
+        }
+
+        .ponente hr {
+            margin-bottom: 1em;
+        }
+
+        .temas *,
+        .somos-parte * {
+            color: var(--text);
+        }
+
+        .temas {
+            padding: 3em;
+        }
+
+        .somos-parte-logos {
+            flex-wrap: wrap;
+            gap: var(--gap-n);
+        }
+
+        @media(max-width: 768px) {
+            .logo-dj {
+                display: none;
+            }
+
+            .hero {
+                flex-direction: column-reverse;
+            }
+
+            .datos-curso,
+            .video {
+                width: 100%;
+            }
+
+            .button {
+                display: block;
+                text-align: center;
+            }
+
+            .dj-director {
+                flex-direction: column;
+            }
+
+            .ponente h2,
+            .temas h2,
+            .somos-parte h2 {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Email -->
+    <header class="header-email">
+
+        <div class="c-titulo-curso">
+            <p><small>¡Te invitamos participar de nuestro Webinar!</small></p>
+            <h1 class="c-titulo">Cómo liderar un equipo comercial en 2023</h1>
+            <p><small><strong>By: </strong>Digital Jump</small></p>
+        </div>
+
+        <a class="logo-dj" href="https://academy.digitaljump.com.ar/inscripcion/" target="_blank">
+            <img src="https://academy.digitaljump.com.ar/wp-content/uploads/2023/07/favicon-Digital-JUMP-1024x1024.webp" alt="Logotipo de Digital Jump" width="50px" height="50px">
+        </a>
+
+    </header>
+
+    <section class="hero">
+
+        <!-- Datos del curso -->
+        <div class="datos-curso">
+
+            <div class="fecha-duracion">
+                <p><i class="bi bi-calendar icon"></i><strong>Fecha: </strong>9 de Agosto</p>
+                <p><i class="bi bi-hourglass-split icon"></i><strong>Duración: </strong>50 min.</p>
+            </div>
+
+            <div class="horarios">
+                <div class="horario-arg">
+                    <img src="https://academy.digitaljump.com.ar/wp-content/uploads/2023/07/Banderita-Argentina.webp" alt="Bandera Argentina" width="16px" height="16px">
+                    <span> 18hs - ARG</span>
+                </div>
+
+                <div class="horario-col">
+                    <img src="https://academy.digitaljump.com.ar/wp-content/uploads/2023/07/Banderita-Colombia.webp" alt="Bandera colombiana" width="16px" height="16px">
+                    <span> 16hs - COL</span>
+                </div>
+
+                <div class="horario-mex">
+                    <img src="https://academy.digitaljump.com.ar/wp-content/uploads/2023/07/Banderita-Mexico.webp" alt="Bandera mexicana" width="16px" height="16px">
+                    <span> 15hs - MEX</span>
+                </div>
+            </div>
+
+            <div>
+                <a href="https://academy.digitaljump.com.ar/inscripcion/" target="_blank" class="button" rel="noopener noreferrer" role="button">¡Inscribete ahora!</a>
+            </div>
+
+        </div>
+
+        <!-- Video -->
+        <div class="video">
+            <a href="https://vimeo.com/845397333" target="_blank">
+                <i class="bi bi-play-circle icon-video"></i>
+                <div>
+                    <img src="https://academy.digitaljump.com.ar/wp-content/uploads/2023/07/Luciano-Tirelli-1.webp" alt="Luciano Tirelli" width="100%">
+                </div>
+            </a>
+        </div>
+
+    </section>
+
+    <!-- Temas -->
+    <section class="temas">
+
+        <h2>¿Qué aprenderás?</h2>
+
+        <ul>
+            <li><i class="bi bi-check-circle icon"></i>Gestión de diversidad y talento: reclutamiento, crecimiento, desarrollo, mantenimiento/retención.</li>
+            <li><i class="bi bi-check-circle icon"></i>Liderazgo y desafíos.</li>
+            <li><i class="bi bi-check-circle icon"></i>Manejo de incertidumbre y frustración.</li>
+            <li><i class="bi bi-check-circle icon"></i>Adaptabilidad a cambios tecnológicos: cambios en herramientas a utilizar para mejorar la eficiencia.</li>
+        </ul>
+
+    </section>
+
+    <!-- Ponente -->
+    <section class="ponente">
+
+        <h2>Ponente:</h2>
+        <hr>
+        <div class="dj-director">
+            <img src="https://academy.digitaljump.com.ar/wp-content/uploads/2023/07/Luciano-Tirelli-Profile-300x300.webp"
+                alt="Luciano Tirelli">
+
+            <div class="datos-lucho">
+                <h3>Luciano Tirelli</h3>
+                <p>Director & Founder Digital Jump</p>
+                <p>Ex Gerente Comercial Groupon</p>
+                <p>Ex Gerente de Marketing Agrofy</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Somos parte de -->
+    <section class="somos-parte">
+
+        <h2>Somos parte de:</h2>
+        <div class="somos-parte-logos">
+            <img src="https://academy.digitaljump.com.ar/wp-content/uploads/2023/07/Logotipo-de-CACE.webp" alt="Logotipo CACE">
+            <img src="https://academy.digitaljump.com.ar/wp-content/uploads/2023/07/Logotipo-de-AMdia-Mejor-marketing.webp" alt="Logotipo AMdía Mejor Marketing">
+            <img src="https://academy.digitaljump.com.ar/wp-content/uploads/2023/07/Logotipo-de-NEC.webp" alt="Logotipo NEC">
+        </div>
+
+    </section>
+
+    <!-- FooterEmail -->
+    <footer class="footer-email">
+
+        <a href="https://digitaljump.com.ar" target="_blank"><img
+                src="https://academy.digitaljump.com.ar/wp-content/uploads/2023/07/Logo-de-Digital-Jump-full-color.webp"
+                alt="Logotipo Digital Jump" width="150px"></a>
+
+        <ul class="social">
+            <li><a href="https://ar.linkedin.com/company/digitaljumpok" target="_blank"><i class="bi bi-linkedin"></i></a></li>
+            <li><a href="https://twitter.com/digitaljumpok" target="_blank"><i class="bi bi-twitter"></i></a></li>
+            <li><a href="https://www.instagram.com/digitaljumpok/" target="_blank"><i class="bi bi-instagram"></i></a></li>
+        </ul>
+
+    </footer>
+
+</body>
+
+</html>
